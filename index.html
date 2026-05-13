@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smaller Challenger Playbook Course</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Smaller Challenger Playbook</h1>
+        <p class="subtitle">Interactive online course experience</p>
+      </div>
+      <a class="source-link" href="https://smaller-agency.github.io/docs/Smaller_ChallengerPlaybook_V9.pdf" target="_blank" rel="noopener noreferrer">Open Source PDF</a>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>Course Chapters</h2>
+          <progress id="progressBar" value="0" max="100"></progress>
+          <p id="progressLabel">0% completed</p>
+        </div>
+        <input id="search" type="search" placeholder="Search chapter title..." />
+        <nav>
+          <ul id="chapterList"></ul>
+        </nav>
+      </aside>
+
+      <section class="content" aria-live="polite">
+        <article id="lesson"></article>
+        <div class="lesson-actions">
+          <button id="markComplete">Mark chapter complete</button>
+          <button id="nextChapter">Next chapter</button>
+        </div>
+      </section>
+    </main>
+
+    <template id="lessonTemplate">
+      <h2></h2>
+      <p class="chapter-meta"></p>
+      <div class="learning-objectives"></div>
+      <div class="chapter-content"></div>
+      <details class="activity">
+        <summary>Hands-on activity</summary>
+        <p></p>
+      </details>
+      <blockquote class="note"></blockquote>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
